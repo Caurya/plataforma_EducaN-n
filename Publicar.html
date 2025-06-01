@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma Digital Educacional de São Tomé e Príncipe</title>
+    <link rel="shortcut icon" href="logo_500x500-removebg-preview.png" type="image/x-icon">
+    <link rel="stylesheet" href="pagina_inicial.css"> <!-- Link para seu CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+   
+</head>
+<body>
+    <header>
+          
+        <div class="logo">
+            <a href="pagina_inicial.html"><img src="logo_500x500-removebg-preview.png" alt="Logotipo" width="100%"></a>
+        </div>
+
+        <div class="search-bar">
+            <input type="text" placeholder="Procurar">
+            <button>
+              🔍
+            </button>
+          </div>
+        
+
+
+        <nav>
+
+            <li><a href="pagina_inicial.html">Início</a></li>
+            <li><a href="/Ensino-Basico.html">Ensino Básico</a></li>
+            <li><a href="/Ensino-Secundario.html">Ensino Secundário</a></li>
+            <li><a href="/Ensino-Superior.html">Ensino Superior</a></li>
+            <li><a href="/Serviços-Online.html">Serviços online</a></li>
+            <li><a href="/Perfil.html">Perfil</a></li>
+        </nav>
+    </header>
+
+     <div class="container">
+        <aside class="sidebar">
+            <ul>
+               <li><a href="Publicar.html"><i class="fas fa-upload"></i> Publicar</a></li>
+                <li><a href="MECC.html"><i class="fas fa-building-columns"></i> MECC</a></li>
+                <li><a href="Videos.html"><i class="fas fa-video"></i> Vídeos</a></li>
+                <li><a href="Recursos_Nacionais.html"><i class="fas fa-book"></i> Recursos Nacionais</a></li>
+                <li><a href="Artigos.html"><i class="fas fa-newspaper"></i> Artigos</a></li>
+                <li><a href="Contacto.html"><i class="fas fa-phone"></i> Contacto</a></li>
+            </ul>
+        </aside>
+
+    <main>
+       
+ <!-- Publicar Livros -->
+        <section id="publicar">
+            <h2>Publicar Recursos</h2>
+            <form action="publicar_livro.php" method="POST" enctype="multipart/form-data">
+                <label for="nivel">Nível de Ensino:</label>
+                <select name="nivel" id="nivel" required>
+                    <option value="basico">Ensino Básico</option>
+                    <option value="secundario">Ensino Secundário</option>
+                    <option value="superior">Ensino Superior</option>
+                </select>
+
+
+                <label for="nivel">Tipo de Recurso:</label>
+                <select name="nivel" id="nivel" required>
+                    <option value="Artigos">Artigos</option>
+                    <option value="Livros didaticos">Livros Didaticos</option>
+                    <option value="TESE">TESE </option>    
+                    <option value="Recursos Nacinais">Recurso Nacionais </option>
+                </select>
+
+                <label for="classe">Classe:</label>
+                <input type="text" name="classe" id="classe" placeholder="Ex: 1ª Classe" required>
+              
+                <label for="titulo">Descrição do Recurso:</label>
+                <input type="text" name="titulo" id="titulo" required>
+
+                <label for="titulo">Diciplina:</label>
+                <input type="text" name="titulo" id="titulo" required>
+
+
+                <label for="arquivo">Arquivo PDF:</label>
+                <input type="file" name="arquivo" id="arquivo" accept="application/pdf" required>
+
+                <button type="submit">Publicar Recursos</button>
+            </form>
+        </section>
+
+
+    </main>    
+
+    <footer>
+        <p>&copy; 2025 PLATAFORMA DIGITAL EDUCACIONAL DE SÃO TOMÉ E PRÍNCIPE</p>
+    </footer>
+</body>
+</html>

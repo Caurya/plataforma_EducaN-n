@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma Digital Educacional de São Tomé e Príncipe</title>
+    <link rel="shortcut icon" href="logo_500x500-removebg-preview.png" type="image/x-icon">
+    <link rel="stylesheet" href="painel-administrativo.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="pagina_inicial.html"><img src="logo_500x500-removebg-preview.png" alt="Logotipo" width="100%"></a>
+        </div>
+
+        <div class="search-bar">
+            <input type="text" placeholder="Procurar">
+            <button>🔍</button>
+        </div>
+
+       
+        <nav>
+
+            <li><a href="pagina_inicial.html">Gerenciar Plataforma</a></li>
+            <li><a href="configuracao.html">Configurações</a></li>
+            <li><a href="/Perfil.html">Perfil</a></li>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Painel Administrativo</h1>
+        
+        <nav class="menu-admin">
+            <ul>
+                <li><a href="#pendentes">📄 Recursos Pendentes</a></li>
+                <li><a href="#certidoes">📨 Pedidos de Certidão</a></li>
+                <li><a href="#estatisticas">📊 Estatísticas</a></li>
+                <li><a href="#publicar">📚 Publicar Recursos</a></li>
+                <li><a href="#Gerenciamento de Segurança">Gerenciamento de Segurança</a></li>
+            </ul>
+        </nav>
+
+        <!-- Recursos Pendentes -->
+        <section id="pendentes">
+            <h2>Recursos Pendentes</h2>
+            <div id="listaPendentes">
+                <!-- Conteúdo carregado dinamicamente do banco -->
+                <p>Nenhum recurso pendente no momento.</p>
+            </div>
+        </section>
+
+        <!-- Pedidos de Certidão -->
+        <section id="certidoes">
+            <h2>Pedidos de Certidão</h2>
+            <div id="listaCertidoes">
+                <!-- Conteúdo carregado dinamicamente do banco -->
+                <p>Nenhum pedido de certidão no momento.</p>
+            </div>
+        </section>
+
+        <!-- Estatísticas -->
+        <section id="estatisticas">
+            <h2>Estatísticas</h2>
+            <p>Total de usuários cadastrados: <strong id="totalUsuarios">0</strong></p>
+            <p>Total de downloads de recursos: <strong id="totalDownloads">0</strong></p>
+        </section>
+
+        <!-- Publicar Livros -->
+        <section id="publicar">
+            <h2>Publicar Recursos</h2>
+            <form action="publicar_livro.php" method="POST" enctype="multipart/form-data">
+                <label for="nivel">Nível de Ensino:</label>
+                <select name="nivel" id="nivel" required>
+                    <option value="basico">Ensino Básico</option>
+                    <option value="secundario">Ensino Secundário</option>
+                    <option value="superior">Ensino Superior</option>
+                </select>
+
+
+                <label for="nivel">Tipo de Recurso:</label>
+                <select name="nivel" id="nivel" required>
+                    <option value="Artigos">Artigos</option>
+                    <option value="Livros didaticos">Livros Didaticos</option>
+                    <option value="TESE">TESE </option>    
+                    <option value="Recursos Nacinais">Recurso Nacionais </option>
+                </select>
+
+                <label for="classe">Classe:</label>
+                <input type="text" name="classe" id="classe" placeholder="Ex: 1ª Classe" required>
+              
+                <label for="titulo">Descrição do Recurso:</label>
+                <input type="text" name="titulo" id="titulo" required>
+
+                <label for="titulo">Diciplina:</label>
+                <input type="text" name="titulo" id="titulo" required>
+
+
+                <label for="arquivo">Arquivo PDF:</label>
+                <input type="file" name="arquivo" id="arquivo" accept="application/pdf" required>
+
+                <button type="submit">Publicar Recursos</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 PLATAFORMA DIGITAL EDUCACIONAL DE SÃO TOMÉ E PRÍNCIPE</p>
+    </footer>
+
+     <script>
+           document.addEventListener("DOMContentLoaded", () => {
+    // Scroll suave para seções
+    document.querySelectorAll(".menu-admin a").forEach(link => {
+        link.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href").replace("#", "");
+            const target = document.getElementById(targetId);
+            if (target) {
+                window.scrollTo({
+                    top: target.offsetTop - 80,
+                    behavior: "smooth"
+                });
+            }
+        });
+    });
+
+    // Exemplo: Simular número de usuários e downloads
+    document.getElementById("totalUsuarios").textContent = "1582";
+    document.getElementById("totalDownloads").textContent = "3490";
+});
+
+        </script>
+</body>
+</html>

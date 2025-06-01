@@ -1,0 +1,184 @@
+/* Painel Administrativo */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+/* cabeçalho */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #970404;
+    color: white;
+    padding: 10px 20px;
+}
+
+header .logo img {
+    height: 100px;
+}
+
+/* itens navegadores */
+nav {
+    display: flex;
+    list-style: none;
+}
+
+nav li {
+    margin: 0 10px;
+}
+
+nav a {
+    color: rgb(249, 247, 247);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* botão de procurar */
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: rgb(247, 105, 105);
+    padding: 10px 10px;
+    border-radius: 8px;
+    width: 400px;
+}
+  
+.search-bar input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    color: white;
+    outline: none;
+    font-size: 16px;
+}
+  
+.search-bar input::placeholder {
+    color: #ccc;
+}
+  
+.search-bar button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+main {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    min-height: 80vh;
+    font-family: Arial, sans-serif;
+}
+
+/* Menu Administrativo */
+.menu-admin {
+    background-color: #004080;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.menu-admin ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+}
+
+.menu-admin a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    background-color: #0066cc;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.menu-admin a:hover {
+    background-color: #003366;
+}
+
+/* Seções */
+section {
+    margin-bottom: 3rem;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+section h2 {
+    border-bottom: 2px solid #004080;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    color: #004080;
+}
+
+/* Formulário de Publicar Livro */
+form label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+form input,
+form select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #0066cc;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #004080;
+}
+
+/* Estatísticas */
+#estatisticas p {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .menu-admin ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+/* rodapé */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background-color: #990000;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
